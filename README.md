@@ -6,7 +6,7 @@ _"HOW IS THIS POSSIBLE?!"_
 
 
 ##  **Live Demo**
-🔗 **[Check it out here!](https://coffad.github.io/Impossible-Warp-Portal/)**  
+🔗 **[Check it out here!](https://coffad.github.com/Impossible-Warp-Portal/)**  
 
 ---
 
