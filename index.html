@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Impossible Warp Portal Animation</title>
+  <style>
+    /* Overall page styling */
+    body {
+      margin: 0;
+      padding: 0;
+      background: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+    /* Portal container */
+    .portal-container {
+      position: relative;
+      width: 150px;
+      height: 150px;
+    }
+    /* Warping rings creating a deep illusion */
+    .ring {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      border: 4px solid transparent;
+      animation: warpSpin 3s linear infinite;
+    }
+    .ring:nth-child(1) {
+      border-top: 4px solid #ff0000;
+      animation-delay: 0s;
+    }
+    .ring:nth-child(2) {
+      border-right: 4px solid #00ff00;
+      animation-delay: 0.2s;
+      animation-direction: reverse;
+    }
+    .ring:nth-child(3) {
+      border-bottom: 4px solid #0000ff;
+      animation-delay: 0.4s;
+    }
+    .ring:nth-child(4) {
+      border-left: 4px solid #ffff00;
+      animation-delay: 0.6s;
+      animation-direction: reverse;
+    }
+    .ring:nth-child(5) {
+      border: 4px solid rgba(255, 255, 255, 0.5);
+      animation-delay: 0.8s;
+      animation-direction: alternate;
+    }
+    .ring:nth-child(6) {
+      border: 4px solid rgba(255, 0, 255, 0.7);
+      animation-delay: 1s;
+      animation-direction: alternate-reverse;
+    }
+    
+    /* Warping animation creating impossible depth */
+    @keyframes warpSpin {
+      0% {
+        transform: rotate(0deg) scale(1);
+      }
+      25% {
+        transform: rotate(90deg) scale(1.3);
+      }
+      50% {
+        transform: rotate(180deg) scale(0.8) skew(10deg);
+      }
+      75% {
+        transform: rotate(270deg) scale(1.5) skew(-10deg);
+      }
+      100% {
+        transform: rotate(360deg) scale(1);
+      }
+    }
+    
+    /* Glowing vortex effect */
+    .center-glow {
+      position: absolute;
+      width: 80px;
+      height: 80px;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
+      border-radius: 50%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(1.2);
+      filter: blur(15px);
+      animation: glowPulse 1.5s infinite alternate;
+    }
+    
+    @keyframes glowPulse {
+      0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.7;
+      }
+      100% {
+        transform: translate(-50%, -50%) scale(1.3);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="portal-container">
+    <div class="ring"></div>
+    <div class="ring"></div>
+    <div class="ring"></div>
+    <div class="ring"></div>
+    <div class="ring"></div>
+    <div class="ring"></div>
+    <div class="center-glow"></div>
+  </div>
+</body>
+</html>
